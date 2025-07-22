@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parsa | Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --bg: #0e0e10;
+      --fg: #ffffff;
+      --accent: #00ffe0;
+      --accent-hover: #00c2aa;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --shadow: rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00ffe0, #00c2aa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 30px var(--shadow);
+      border-color: var(--accent);
+    }
+    .project-card h3 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+    .project-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-tag {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #00ffe0;
+      transition: background 0.3s;
+    }
+    .skill-tag:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--card-border);
+    }
+    .contact p {
+      color: #aaa;
+    }
+    .contact-links a {
+      font-size: 1.6rem;
+      color: #999;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+    .contact-links a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Parsa</h1>
+      <p>High School Student · Aspiring Software Developer · Python & AI Enthusiast</p>
+    </header>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>SecretMessenger</h3>
+          <p>A secure messaging app using steganography to hide texts inside images.</p>
+          <a href="https://github.com/Parsa-web/SecretMessenger" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+        <div class="project-card">
+          <h3>SpeechVault</h3>
+          <p>A voice-locked digital vault built with Python and speech recognition.</p>
+          <a href="https://github.com/Parsa-web/SpeechVault" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+        <div class="project-card">
+          <h3>PasswordKeeper</h3>
+          <p>A local password manager with GUI, encryption, and copy functionality.</p>
+          <a href="https://github.com/Parsa-web/PasswordKeeper" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Tkinter</span>
+        <span class="skill-tag">CustomTkinter</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Git & GitHub</span>
+        <span class="skill-tag">Steganography</span>
+        <span class="skill-tag">AI/ML Basics</span>
+        <span class="skill-tag">HTML/CSS</span>
+      </div>
+    </section>
+
+    <section class="contact">
+      <p><strong>Let’s build something together.</strong> I'm open to collaboration and tech discussions.</p>
+      <div class="contact-links">
+        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Parsa-web" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> Parsa — Made with 💻 + ☕
+  </footer>
+</body>
+</html>
 
